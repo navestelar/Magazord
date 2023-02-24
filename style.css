@@ -35,7 +35,7 @@ body {
 }
 #fundo {
   position: absolute;
-  height: 100.7rem;
+  height: 100vh;
   width: 53.3rem;
   right: 0;
   background: #ffffff;
@@ -45,7 +45,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 14rem 7.3rem 9.8rem 6rem;
 }
 a {
   text-decoration: none;
