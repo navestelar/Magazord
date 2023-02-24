@@ -22,7 +22,7 @@ body {
 #img {
   position: absolute;
   background-image: url(./assets/imagem.jpg);
-  width: 75vw;
+  width: 1fr;
   height: 107vh;
   left: -73px;
   top: -20px;
@@ -36,9 +36,9 @@ body {
 #fundo {
   position: absolute;
   height: 100vh;
-  width: 39rem;
+  width: 53.3rem;
   background: #ffffff;
-  right: 6.1rem;
+  right: 0;
 }
 #lateral {
   display: flex;
