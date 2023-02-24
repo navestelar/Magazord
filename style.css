@@ -24,7 +24,7 @@ body {
   background-image: url(./assets/imagem.jpg);
   width: 75vw;
   height: 107vh;
-  left: -73px;
+  left: -56px;
   top: -20px;
   animation: dissolve_back 150ms ease-out;
   filter: blur(8px);
@@ -36,32 +36,32 @@ body {
 #fundo {
   position: absolute;
   height: 100vh;
-  width: 39rem;
+  width: 39.6rem;
   background: #ffffff;
-  right: 6.1rem;
+  right: 1rem;
 }
 #lateral {
+  width: 40.6rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 11rem auto 3rem 5rem;
 }
 a {
   text-decoration: none;
   justify-content: center;
 }
 #logo {
-  padding-bottom: 5rem;
+  padding-bottom: 4.6rem;
 }
 #logotipo {
   display: flex;
   align-items: center;
   background-image: url(./assets/logotipo.svg);
   border: transparent;
-  width: 28.1rem;
-  height: 5rem;
-  margin-left: -1rem;
+  width: 25.1rem;
+  height: 4.1rem;
 }
 #logotipo:hover {
   background-image: url(./assets/logotipohover.svg);
@@ -73,9 +73,9 @@ a {
 .cabecalho p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.35rem;
+  font-size: 1.22rem;
   color: rgba(115, 115, 115, 1);
-  margin: -0.4rem auto auto 4.1rem;
+  margin-left: 4.6rem;
 }
 form {
   display: flex;
@@ -85,33 +85,34 @@ form {
   display: flex;
   flex-direction: column-reverse;
 }
-#form .label {
+#myForm .label {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.37rem;
   color: #989898;
-  padding-bottom: 1.4rem;
+  padding-bottom: 1rem;
 }
-#form .input {
+#myForm .input {
   border-style: none;
-  border-bottom: 0.3rem solid #dbdbdb;
-  width: 33.9rem;
+  border-bottom: 0.15rem solid #dbdbdb;
+  width: 30.5rem;
   height: 2rem;
   font-size: 1.5rem;
   background-color: transparent;
-  margin-bottom: 3rem;
+  margin-bottom: 2.4rem;
   outline: none;
   color: #989898;
 }
-#form .input:focus {
-  border-color: #0587FF;
+#myForm .input:focus {
+  border-color: #0587ff;
   color: #262626;
 }
-#form input:focus-within + label{
+#myForm input:focus-within + label {
   color: rgba(38, 38, 38, 1);
 }
-#form input:hover, #form label:hover {
+#myForm input:hover,
+#myForm label:hover {
   cursor: pointer;
 }
 #nuvem {
@@ -119,16 +120,20 @@ form {
   align-items: center;
   justify-content: center;
   border: 0.2rem solid #57aeff;
-  width: 34rem;
-  height: 4rem;
+  width: 30.5rem;
+  height: 3.66rem;
   border-radius: 7.3rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.9rem;
   color: rgba(87, 174, 255, 1);
   gap: 1.6rem;
-  margin: 1.8rem auto 9.8rem;
+  margin: 2.2rem auto 8.6rem;
+}
+#nuvem img {
+  width: 1.83rem;
+  height: 1.83rem;
 }
 #nuvem:hover {
   border: 2px solid rgba(5, 135, 255, 1);
@@ -136,23 +141,18 @@ form {
   color: rgba(5, 135, 255, 1);
 }
 #cadastrar {
-  background: #57AEFF;
+  background: #57aeff;
   border: none;
   border-radius: 6.5rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
-  color: #FFFFFF;
-  padding: 1.2rem;
-  width: 21rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 1.22rem;
+  width: 19rem;
 }
 #cadastrar:hover {
-  background: #0587FF;
+  background: #0587ff;
   cursor: pointer;
-}
-#login {
-  background: none;
-  border: none;
-  color: rgba(152, 152, 152, 1);
 }
 #curriculo {
   display: none;
@@ -166,8 +166,18 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0.76rem;
   margin-left: 3.5rem;
+  background: none;
+  border: none;
+  color: rgba(152, 152, 152, 1);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.37rem;
+}
+#login img {
+  width: 1.83rem;
+  height: 1.83rem;
 }
 @keyframes dissolve {
   from {
