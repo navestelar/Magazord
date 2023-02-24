@@ -41,8 +41,8 @@ cpf.addEventListener("blur", function () {
 			dataFormat = vdia + " / " + vmes + " / " + vano;
 			horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
 
-			document.getElementById("data").innerHTML = dataFormat;
-			document.getElementById("hora").innerHTML = horaFormat;
+			document.getElementsByTagName("data").innerHTML = dataFormat;
+			document.getElementsByTagName("hora").innerHTML = horaFormat;
 
 			setTimeout("atualizaRelogio()",1000);
       }
