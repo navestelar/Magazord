@@ -1,140 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-    <title>Magazord</title>
-  </head>
-  <body>
-    <div id="viewport">
-      <div id="imagem">
-        <img
-          id="img"
-          src="./assets/imagem.jpg"
-          alt="imagem de duas pessoas em frente a computadores conversando sobre programação"
-        />
-      </div>
-      <div id="fundo">
-        <div id="lateral">
-          <div id="logo">
-            <a
-              id="logoa"
-              href="https://www.magazord.com.br/vagas/"
-              target="_blank"
-            >
-              <div class="cabecalho">
-                <div id="logotipo"></div>
-                <p>
-                  Contamos com você para fazer parte da maior <br />
-                  equipe de tecnologia do alto vale do Itajaí
-                </p>
-              </div>
-            </a>
-          </div>
-          <div id="formulario">
-            <form
-              id="form"
-              action="https://api.sheetmonkey.io/form/fvyeycgYrHjhSKE7ZL8Ukt"
-              method="post"
-              enctype="multipart/form-data"
-            >
-              <div class="inputlabel">
-                <input
-                  id="nome"
-                  class="input"
-                  type="text"
-                  name="Nome Completo"
-                  autocomplete="cc-name"
-                  required
-                />
-                <label for="nome" class="label">Nome Completo </label>
-              </div>
+  <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
 
-              <div class="inputlabel">
-                <input
-                  id="email"
-                  class="input"
-                  name="E-mail"
-                  type="email"
-                  autocomplete="email"
-                  required
-                />
-                <label for="email" class="label">E-mail</label>
-              </div>
+  <title>Magazord</title>
 
-              <div class="inputlabel">
-                <input
-                  id="cpf"
-                  class="input"
-                  type="text"
-                  name="CPF"
-                  required
-                  autocomplete="on"
-                  minlength="11"
-                />
-                <label for="cpf" class="label">CPF</label>
-              </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+</head>
 
-              <div class="inputlabel">
-                <input
-                  id="tel"
-                  class="input"
-                  type="tel"
-                  name="Telefone"
-                  autocomplete="tel-local"
-                  required
-                  minlength="8"
-                />
-                <label class="label" for="tel">Telefone</label>
-              </div>
+<body>
+  <div id="viewport">
+    <div id="imagem">
+      <img id="img" src="./assets/imagem.jpg"
+        alt="imagem de duas pessoas em frente a computadores conversando sobre programação" />
+    </div>
+    <div id="fundo">
+      <div id="lateral">
+        <div id="logo">
+          <a id="logoa" href="https://www.magazord.com.br/vagas/" target="_blank">
+            <div class="cabecalho">
+              <div id="logotipo"></div>
+              <p>
+                Contamos com você para fazer parte da maior <br />
+                equipe de tecnologia do alto vale do Itajaí
+              </p>
+            </div>
+          </a>
+        </div>
+        <div id="formulario">
+          <form id="myForm" action="https://api.apispreadsheets.com/data/Fxnpn35vMXYZIezW/" method="post"
+            enctype="multipart/form-data">
+            <div class="inputlabel">
+              <input id="nome" class="input" type="text" name="Nome Completo" autocomplete="cc-name" required />
+              <label for="nome" class="label">Nome Completo </label>
+            </div>
 
-              <label id="nuvem" for="curriculo">
-                <img src="./assets/nuvem.svg" alt="" /> Anexar Currículo</label
-              >
-              <input
-                id="curriculo"
-                type="file"
-                accept=".doc, .pdf"
-                name="Currículo"
-                value="Currículo"
-              />
-            </form>
+            <div class="inputlabel">
+              <input id="email" class="input" name="E-mail" type="email" autocomplete="email" required />
+              <label for="email" class="label">E-mail</label>
+            </div>
+
+            <div class="inputlabel">
+              <input id="cpf" class="input" type="text" name="CPF" required autocomplete="on" minlength="11" />
+              <label for="cpf" class="label">CPF</label>
+            </div>
+
+            <div class="inputlabel">
+              <input id="tel" class="input" type="tel" name="Telefone" autocomplete="tel-local" required
+                minlength="8" />
+              <label class="label" for="tel">Telefone</label>
+            </div>
+
+            <input type="hidden" name="Created" value="current-date-time" />
+
+            <label id="nuvem" for="curriculo">
+              <img src="./assets/nuvem.svg" alt="" /> Anexar Currículo</label>
+            <input id="curriculo" type="file" accept=".doc, .pdf" name="Currículo" value="Currículo" />
             <div id="rodape">
-              <input
-                type="hidden"
-                name="Created"
-                value="x-sheetmonkey-current-date-time"
-              />
-              <button
-                form="form"
-                id="cadastrar"
-                type="submit"
-                name="button"
-                value="Submit"
-                action="https://api.sheetmonkey.io/form/fvyeycgYrHjhSKE7ZL8Ukt"
-              >
+              <button form="myForm" id="cadastrar" type="submit" name="submit" value="Submit"
+                action="https://api.apispreadsheets.com/data/Fxnpn35vMXYZIezW/">
                 Cadastrar
               </button>
               <button id="login">
                 Login <img src="./assets/arrowlogin.svg" alt="" />
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-  </body>
-  <script src="./script.js"></script>
+  </div>
+</body>
+<script src="./script.js"></script>
+
 </html>
