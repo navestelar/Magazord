@@ -17,6 +17,13 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+  <script type="text/javascript">
+    jQuery(window).load(function ($) {
+      atualizaRelogio();
+    });
+  </script>
 </head>
 
 <body>
@@ -62,7 +69,10 @@
               <label class="label" for="tel">Telefone</label>
             </div>
 
-            <input type="hidden" name="Created" value="current-date-time" />
+            <output id="data" name="Data" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"
+              hidden></output>
+            <output id="hora" name="Hora" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"
+              hidden></output>
 
             <label id="nuvem" for="curriculo">
               <img src="./assets/nuvem.svg" alt="" /> Anexar Currículo</label>
