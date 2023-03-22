@@ -15,15 +15,6 @@
 
   <title>Magazord</title>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-
-  <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-  <script type="text/javascript">
-    jQuery(window).load(function ($) {
-      atualizaRelogio();
-    });
-  </script>
 </head>
 
 <body>
@@ -34,12 +25,13 @@
     </div>
     <div id="fundo">
       <div id="lateral">
-        <div id="logo">
+        <div id="cabecalho">
           <a id="logoa" href="https://www.magazord.com.br/vagas/" target="_blank">
-            <div class="cabecalho">
+            <div class="logo">
               <div id="logotipo"></div>
               <p>
-                Contamos com você para fazer parte da maior <br />
+                Contamos com você para fazer parte da maior
+                <br />
                 equipe de tecnologia do alto vale do Itajaí
               </p>
             </div>
@@ -68,11 +60,6 @@
                 minlength="8" />
               <label class="label" for="tel">Telefone</label>
             </div>
-
-            <output id="data" name="data" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"
-              hidden></output>
-            <output id="hora" name="hora" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"
-              hidden></output>
 
             <label id="nuvem" for="curriculo">
               <img src="./assets/nuvem.svg" alt="" /> Anexar Currículo</label>

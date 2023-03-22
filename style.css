@@ -1,10 +1,21 @@
+:root {
+  font-size: 62.5%;
+  --label-font-color: #989898;
+  --input-font-color: #989898;
+  --input-font-color-focus: #262626;
+  --input-border-color: 0.2rem solid #dbdbdb;
+  --button-font-color: #ffffff;
+  --button-border-color: 0.2rem solid #57aeff;
+  --button-border-color-hover: 0.2rem solid #0587ff;
+  --label-text-font-style: normal 400 1.8rem "Roboto", sans-serif;
+  --image-url: url(./assets/imagem.jpg);
+  --logotipo-url: url(./assets/logotipo.svg);
+  --logotipo-url-hover: url(./assets/logotipohover.svg);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-:root {
-  font-size: 62.5%;
 }
 body * {
   list-style: none;
@@ -17,17 +28,23 @@ body {
 #viewport {
   width: 100vw;
   height: 100vh;
-  margin: none;
+  margin: 0;
+  padding: 0;
+}
+#imagem {
+  position: absolute;
+  width: calc(100vw-53.3rem);
+  height: 107vh;
+  left: -7.3rem;
+  top: -2rem;
 }
 #img {
   position: absolute;
-  background-image: url(./assets/imagem.jpg);
-  width: 75vw;
+  background-image: var(--image-url);
+  width: calc(1.24 * vh);
   height: 107vh;
-  left: -56px;
-  top: -20px;
   animation: dissolve_back 150ms ease-out;
-  filter: blur(8px);
+  filter: blur(12px);
 }
 #img:hover {
   animation: dissolve 150ms ease-out;
@@ -36,12 +53,14 @@ body {
 #fundo {
   position: absolute;
   height: 100vh;
-  width: 39.6rem;
+  width: 53.3rem;
+  right: 0;
   background: #ffffff;
-  right: 1rem;
+  margin: 0;
+  padding: 0;
 }
 #lateral {
-  width: 40.6rem;
+  width: 53.3rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -52,30 +71,30 @@ a {
   text-decoration: none;
   justify-content: center;
 }
-#logo {
-  padding-bottom: 4.6rem;
+#cabecalho {
+  padding-bottom: 6.1rem;
 }
 #logotipo {
   display: flex;
   align-items: center;
-  background-image: url(./assets/logotipo.svg);
-  border: transparent;
-  width: 25.1rem;
-  height: 4.1rem;
+  background-image: var(--logotipo-url);
+  border: none;
+  width: 32.9rem;
+  height: 5.4rem;
 }
 #logotipo:hover {
-  background-image: url(./assets/logotipohover.svg);
+  background-image: var(--logotipo-url-hover);
 }
-.cabecalho {
+.logo {
   display: flex;
   flex-direction: column;
 }
-.cabecalho p {
+#cabecalho p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.22rem;
+  font-size: 1.6rem;
   color: rgba(115, 115, 115, 1);
-  margin-left: 4.6rem;
+  margin-left: 6.15rem;
 }
 form {
   display: flex;
@@ -86,30 +105,25 @@ form {
   flex-direction: column-reverse;
 }
 #myForm .label {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.37rem;
-  color: #989898;
-  padding-bottom: 1rem;
+  font: var(--label-text-font-style);
+  color: var(--label-font-color);
 }
 #myForm .input {
   border-style: none;
-  border-bottom: 0.15rem solid #dbdbdb;
-  width: 30.5rem;
-  height: 2rem;
-  font-size: 1.5rem;
+  border-bottom: var(--input-border-color);
+  width: 40rem;
+  height: 4rem;
+  color: var(--input-font-color);
   background-color: transparent;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
   outline: none;
-  color: #989898;
 }
 #myForm .input:focus {
   border-color: #0587ff;
-  color: #262626;
+  color: var(--input-font-color-focus);
 }
 #myForm input:focus-within + label {
-  color: rgba(38, 38, 38, 1);
+  color: var(--input-font-color-focus);
 }
 #myForm input:hover,
 #myForm label:hover {
@@ -119,24 +133,24 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.2rem solid #57aeff;
-  width: 30.5rem;
-  height: 3.66rem;
+  border: var(--button-border-color);
+  width: 40rem;
+  height: 4.8rem;
   border-radius: 7.3rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.9rem;
   color: rgba(87, 174, 255, 1);
   gap: 1.6rem;
-  margin: 2.2rem auto 8.6rem;
+  margin: 2.9rem auto 11.3rem;
 }
 #nuvem img {
-  width: 1.83rem;
-  height: 1.83rem;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 #nuvem:hover {
-  border: 2px solid rgba(5, 135, 255, 1);
+  border: var(--button-border-color-hover);
   background: rgba(5, 135, 255, 0.05);
   color: rgba(5, 135, 255, 1);
 }
@@ -145,10 +159,13 @@ form {
   border: none;
   border-radius: 6.5rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
   color: #ffffff;
-  padding: 1.22rem;
-  width: 19rem;
+  padding: 1.6rem;
+  width: 25rem;
+  height: 5.5rem;
 }
 #cadastrar:hover {
   background: #0587ff;
@@ -161,23 +178,24 @@ form {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 #login {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.76rem;
-  margin-left: 3.5rem;
+  gap: 1.5rem;
   background: none;
   border: none;
   color: rgba(152, 152, 152, 1);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1.37rem;
+  font-size: 1.8rem;
+  padding: 1.6rem;
 }
 #login img {
-  width: 1.83rem;
-  height: 1.83rem;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 @keyframes dissolve {
   from {
