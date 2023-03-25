@@ -17,6 +17,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
 body * {
   list-style: none;
   font-family: "Roboto", sans-serif;
@@ -33,8 +38,8 @@ body {
 }
 #imagem {
   position: absolute;
-  width: calc(100vw-53.3rem);
   height: 107vh;
+  width: auto;
   left: -7.3rem;
   top: -2rem;
 }
@@ -62,6 +67,7 @@ body {
 #lateral {
   width: 53.3rem;
   height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -197,6 +203,7 @@ form {
   width: 2.4rem;
   height: 2.4rem;
 }
+
 @keyframes dissolve {
   from {
     filter: blur(8px);
